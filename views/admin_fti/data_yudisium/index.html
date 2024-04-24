@@ -162,6 +162,8 @@
                     </th>
                     <th style="background-color: #EEC01D;">Periode</th>
                     <th style="background-color: #EEC01D;">Tahun</th>
+                    <th style="background-color: #EEC01D;">SK</th>
+                    <th style="background-color: #EEC01D;">Surat</th>
                     <th style="background-color: #EEC01D;">Aksi</th>
                   </tr>
                   </thead>
@@ -175,6 +177,8 @@
                     <td><p class="small text-center rounded bg-success" disabled>Sudah Divalidasi</p></td>
                     <td>Januari</td>
                     <td>2023</td>
+                    <td>Diterbitkan</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
                       <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
@@ -190,6 +194,8 @@
                     <td><p class="small text-center rounded bg-danger" disabled>Belum Divalidasi</p></td>
                     <td>Januari</td>
                     <td>2023</td>
+                    <td>Diterbitkan</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
                       <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
@@ -205,6 +211,8 @@
                     <td><p class="small text-center rounded bg-success" disabled>Sudah Divalidasi</p></td>
                     <td>Januari</td>
                     <td>2023</td>
+                    <td>Diterbitkan</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
                       <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
@@ -220,6 +228,8 @@
                     <td><p class="small text-center rounded bg-danger" disabled>Belum Divalidasi</p></td>
                     <td>Januari</td>
                     <td>2023</td>
+                    <td>Diterbitkan</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
                       <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
@@ -235,6 +245,8 @@
                     <td><p class="small text-center rounded bg-success" disabled>Sudah Divalidasi</p></td>
                     <td>Januari</td>
                     <td>2023</td>
+                    <td>Diterbitkan</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
                       <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
@@ -252,6 +264,8 @@
                     <th style="background-color: #EEC01D;">Status</th>
                     <th style="background-color: #EEC01D;">Periode</th>
                     <th style="background-color: #EEC01D;">Tahun</th>
+                    <th style="background-color: #EEC01D;">SK</th>
+                    <th style="background-color: #EEC01D;">Surat</th>
                     <th style="background-color: #EEC01D;">Aksi</th>
                   </tr>
                   </tfoot>
@@ -271,18 +285,18 @@
     </div>
   <!-- /.content-wrapper -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Berkas -->
+  <div class="modal fade" id="modalBerkas" tabindex="-1" role="dialog" aria-labelledby="modalBerkasLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+          <h5 class="modal-title" id="modalBerkasLabel">Berkas</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Modal Content Goes Here
+          <embed src="../../../assets/img/logo-fti.png" type="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
