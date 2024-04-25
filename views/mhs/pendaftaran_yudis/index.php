@@ -19,6 +19,7 @@ Pendaftaran Yudisium
                     <div class="form-group col-3">
                       <label class="form-label" for="sb_ukt">Surat Bebas UKT</label>
                       <input type="text" disabled class="form-control" name="sb_ukt" id="sb_ukt" placeholder="Diterbitkan">
+                      <a href="../pengajuan_berkas/index.html">Lengkapi Berkas</a>
                     </div>
                     <div class="form-group col-1">
                       <input class="mt-5" type="checkbox" checked disabled>

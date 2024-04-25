@@ -20,14 +20,6 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="../pengajuan_berkas/index.html" class="nav-link" style="color: black;">
-            <i class="nav-icon fas fa-file-upload"></i>
-            <p>
-            Pengajuan Berkas
-            </p>
-        </a>
-        </li>
-        <li class="nav-item">
         <a href="../cek_status/index.html" class="nav-link" style="color: black;">
             <i class="nav-icon fas fa-check"></i>
             <p>
