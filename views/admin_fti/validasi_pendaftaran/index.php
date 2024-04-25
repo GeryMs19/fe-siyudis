@@ -168,6 +168,59 @@ Kelola Data Yudisium
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+
+  <!-- Modal Terima -->
+  <div class="modal fade" id="modalTerima">
+    <div class="modal-dialog">
+      <form class="modal-content">
+
+        <!-- Header modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Terima Pengajuan</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Isi modal -->
+        <div class="modal-body">
+          <p>Apakah Anda yakin ingin menerima pengajuan ini?</p>
+        </div>
+
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-success">Terima</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Tolak -->
+  <div class="modal fade" id="modalTolak">
+    <div class="modal-dialog">
+      <form action="" class="modal-content">
+
+        <!-- Header modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tolak Pengajuan</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Isi modal -->
+        <div class="modal-body">
+              <label for="keterangan">Alasan Penolakan</label>
+              <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+        </div>
+
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger">Tolak</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
 <?= $this->endSection() ?>
 
     

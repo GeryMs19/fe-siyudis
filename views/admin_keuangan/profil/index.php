@@ -11,7 +11,7 @@ Update Profil
           <div class="col-6">
             <div class="card">
               <div class="card-body">
-                <form class="">
+                <form class="" action="#" method="POST" enctype="multipart/form-data">
                   <div class="d-flex justify-content-center align-items-center">
                     <img class="profile-user-img img-fluid img-circle" src="../../../assets/img/default.png" alt="">
                   </div>

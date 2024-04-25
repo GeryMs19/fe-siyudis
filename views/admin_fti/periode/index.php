@@ -17,7 +17,7 @@ Periode & Tanda Terima
               <div class="card-body">
                 <label for="periode">Periode : Maret/2024</label><br>
                 <p class="badge badge-danger" id="periode">Periode Sudah Berakhir atau Belum Dimulai</p>
-                <form action="../../admin_fti/periode/selesai.html" method="get">
+                <form action="#" method="POST">
                   <div class="row">
                     <div class="col-6">
                       <div class="form-group">

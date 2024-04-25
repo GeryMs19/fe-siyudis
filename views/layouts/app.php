@@ -8,14 +8,15 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="href="<?= base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
   <!-- DataTables -->
-  <link rel="stylesheet" href="href="<?= base_url('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
-  <link rel="stylesheet" href="href="<?= base_url('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
-  <link rel="stylesheet" href="href="<?= base_url('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') ?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="href="<?= base_url('assets/dist/css/adminlte.min.css') ?>">
-  <link rel="stylesheet" href="href="<?= base_url('assets/css/style.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/dist/css/adminlte.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+  <?= $this->renderSection('style') ?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -34,7 +35,7 @@
       <li class="nav-item">
       <div class="user-panel d-flex">
         <div class="image">
-          <img src="href="<?= base_url('assets/img/default.png') ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('assets/img/default.png') ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block warna-ketiga">Admin FTI</a>
@@ -49,7 +50,7 @@
   <aside class="main-sidebar elevation-4 bg-warna">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link pb-0 mb-0">
-      <img src="href="<?= base_url('assets/img/logo-fti.png') ?>" alt="Logo" class="brand-image img-circle elevation-3 border">
+      <img src="<?= base_url('assets/img/logo-fti.png') ?>" alt="Logo" class="brand-image img-circle elevation-3 border">
       <span class="brand-text font-weight-light">
       <div style="font-size: 12px; color: black; font-weight: bold">Fakultas Teknologi Industri</div>
       <div style="font-size: 10px; color: black; font-weight: bold">Sistem Informasi Manajeman Yudisium</div>
@@ -57,64 +58,10 @@
     <hr>
     </a>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="../dashboard/index.html" class="nav-link" style="color: black;">
-              <i class="nav-icon fas fa-home"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../validasi_pendaftaran/index.html" class="nav-link" style="color: black;">
-              <i class="nav-icon fas fa-check"></i>
-              <p>
-                Validasi Pendaftaran
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link aktif" style="color: black;">
-              <i class="nav-icon fas fa-file"></i>
-              <p>
-                Kelola Data Yudisium
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../periode/index.html" class="nav-link" style="color: black;">
-              <i class="nav-icon fas fa-calendar"></i>
-              <p>
-                Periode & Tanda Terima
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../profil/index.html" class="nav-link" style="color: black;">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Profil
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/" class="nav-link" style="color: black;">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                Logout
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
+    <?= $this->include('layouts/menu_mhs') ?>
+    <?= $this->include('layouts/menu_fti') ?>
+    <?= $this->include('layouts/menu_pustaka') ?>
+    <?= $this->include('layouts/menu_keuangan') ?>
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
@@ -174,7 +121,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <embed src="href="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
@@ -195,93 +142,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <embed src="href="<?= base_url('assets/img/logo-fti.png') ?>" type="">
-          <embed src="href="<?= base_url('assets/img/logo-fti.png') ?>" type="">
-          <embed src="href="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
           <!-- Additional buttons can be added here -->
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Terima -->
-  <div class="modal fade" id="modalTerima">
-    <div class="modal-dialog">
-      <form class="modal-content">
-
-        <!-- Header modal -->
-        <div class="modal-header">
-          <h4 class="modal-title">Terima Pengajuan</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Isi modal -->
-        <div class="modal-body">
-          <p>Apakah Anda yakin ingin menerima pengajuan ini?</p>
-        </div>
-
-        <!-- Footer modal -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-success">Terima</button>
-        </div>
-
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal Tolak -->
-  <div class="modal fade" id="modalTolak">
-    <div class="modal-dialog">
-      <form action="" class="modal-content">
-
-        <!-- Header modal -->
-        <div class="modal-header">
-          <h4 class="modal-title">Tolak Pengajuan</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Isi modal -->
-        <div class="modal-body">
-              <label for="keterangan">Alasan Penolakan</label>
-              <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
-        </div>
-
-        <!-- Footer modal -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-danger">Tolak</button>
-        </div>
-
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal Hapus -->
-  <div class="modal fade" id="modalHapus">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Header modal -->
-        <div class="modal-header">
-          <h4 class="modal-title">Hapus Data</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Isi modal -->
-        <div class="modal-body">
-          <p>Apakah Anda yakin ingin menghapus data ini?</p>
-        </div>
-
-        <!-- Footer modal -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-danger">Hapus</button>
-        </div>
-
       </div>
     </div>
   </div>
@@ -300,25 +168,25 @@
 
 
 <!-- jQuery -->
-<script src="href="<?= base_url('assets/plugins/jquery/jquery.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap 4 -->
-<script src="href="<?= base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <!-- DataTables  & Plugins -->
-<script src="href="<?= base_url('assets/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-buttons/js/dataTables.buttons.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/jszip/jszip.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/pdfmake/pdfmake.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/pdfmake/vfs_fonts.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-buttons/js/buttons.html5.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-buttons/js/buttons.print.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/plugins/datatables-buttons/js/buttons.colVis.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-buttons/js/dataTables.buttons.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/jszip/jszip.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/pdfmake/pdfmake.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/pdfmake/vfs_fonts.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-buttons/js/buttons.html5.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-buttons/js/buttons.print.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-buttons/js/buttons.colVis.min.js') ?>"></script>
 <!-- AdminLTE App -->
-<script src="href="<?= base_url('assets/dist/js/adminlte.min.js') ?>"></script>
-<script src="href="<?= base_url('assets/js/script.js') ?>"></script>
+<script src="<?= base_url('assets/dist/js/adminlte.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/script.js') ?>"></script>
 <!-- Page specific script -->
 <script>
     
@@ -388,6 +256,7 @@ $(document).ready(function() {
   table.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 });
 </script>
+<?= $this->renderSection('script') ?>
 </body>
 </html>
 

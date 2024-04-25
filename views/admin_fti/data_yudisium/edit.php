@@ -11,7 +11,7 @@ Edit Berkas
           <div class="col-12">
             <div class="card mb-5">
               <div class="card-body">
-                <form class="">
+                <form class="" action="#" method="POST" enctype="multipart/form-data">
                   <div class="form-group">
                     <label class="form-label" for="status">Status</label>
                     <select class="form-control" name="status" id="status">

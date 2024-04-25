@@ -24,7 +24,7 @@ Pengajuan Berkas Yudisium
                   <div class="slider-tab"></div>
                 </div>
                 <div class="form-inner">
-                  <form action="#" class="login mb-5">
+                  <form action="#" class="login mb-5" method="POST" enctype="multipart/form-data">
                     <div class="row">
                       <div class="form-group col-4">
                         <label class="form-label" for="ba_sidang">Berita Acara Sidang</label>
@@ -44,7 +44,7 @@ Pengajuan Berkas Yudisium
                       <input type="submit" value="Ajukan" />
                     </div>
                   </form>
-                  <form action="#" class="signup">
+                  <form action="#" class="signup" method="POST" enctype="multipart/form-data">
                     <div class="row">
                     </div>
                     <div class="field btn">

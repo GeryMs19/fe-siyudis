@@ -44,7 +44,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4 font-weight-bold">REGISTER PAGE</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="#" method="POST" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <input type="email" class="form-control"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"

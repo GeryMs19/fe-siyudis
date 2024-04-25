@@ -11,7 +11,7 @@ Pendaftaran Yudisium
           <div class="col-12 mb-5">
             <div class="card">
               <div class="card-body">
-                <form class="" action="" method="post" enctype="multipart/form-data">
+                <form class="" action="#" method="POST" enctype="multipart/form-data">
                   <div class="d-flex justify-content-center align-items-center py-2 mb-3" style="background-color: #EEC01D; border-radius: 20px;">
                     <b>Form Pendaftaran Yudisium</b>
                   </div>
