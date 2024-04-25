@@ -176,4 +176,48 @@ Kelola Bebas Pustaka
       </form>
     </div>
   </div>
+
+  <!-- Modal Berkas -->
+  <div class="modal fade" id="modalBerkas" tabindex="-1" role="dialog" aria-labelledby="modalBerkasLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBerkasLabel">Berkas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Additional buttons can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detail Berkas -->
+  <div class="modal fade" id="detailBerkas" tabindex="-1" role="dialog" aria-labelledby="detailBerkasLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detailBerkasLabel">Detail Berkas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+          <embed src="<?= base_url('assets/img/logo-fti.png') ?>" type="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Additional buttons can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
 <?= $this->endSection() ?>
