@@ -11,6 +11,9 @@ Kelola Data Yudisium
           <div class="col-12">
             <div class="card mb-5">
               <div class="card-body">
+              <div class="text-right mb-3">
+                  <a href="create.php" class="btn btn-primary btn-sm">Tambah</a>
+              </div>
               <div class="table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -47,9 +50,9 @@ Kelola Data Yudisium
                     <td>Diterbitkan</td>
                     <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
-                      <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="edit.php" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
-                      <a href="detail.html" class="btn btn-success btn-sm">Detail</a>
+                      <a href="detail.php" class="btn btn-success btn-sm">Detail</a>
                     </td>
                   </tr>
                   <tr>
@@ -64,9 +67,9 @@ Kelola Data Yudisium
                     <td>Diterbitkan</td>
                     <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
-                      <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="edit.php" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
-                      <a href="detail.html" class="btn btn-success btn-sm">Detail</a>
+                      <a href="detail.php" class="btn btn-success btn-sm">Detail</a>
                     </td>
                   </tr>
                   <tr>
@@ -81,9 +84,9 @@ Kelola Data Yudisium
                     <td>Diterbitkan</td>
                     <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
-                      <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="edit.php" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
-                      <a href="detail.html" class="btn btn-success btn-sm">Detail</a>
+                      <a href="detail.php" class="btn btn-success btn-sm">Detail</a>
                     </td>
                   </tr>
                   <tr>
@@ -98,9 +101,9 @@ Kelola Data Yudisium
                     <td>Diterbitkan</td>
                     <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
-                      <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="edit.php" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
-                      <a href="detail.html" class="btn btn-success btn-sm">Detail</a>
+                      <a href="detail.php" class="btn btn-success btn-sm">Detail</a>
                     </td>
                   </tr>
                   <tr>
@@ -115,9 +118,9 @@ Kelola Data Yudisium
                     <td>Diterbitkan</td>
                     <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
                     <td>
-                      <a href="edit.html" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="edit.php" class="btn btn-warning btn-sm">Edit</a>
                       <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</button>
-                      <a href="detail.html" class="btn btn-success btn-sm">Detail</a>
+                      <a href="detail.php" class="btn btn-success btn-sm">Detail</a>
                     </td>
                   </tr>
                   </tbody>
