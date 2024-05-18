@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIYUDIS | Validasi Pendaftaran</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../../assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../../assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../../assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed-top">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+      <div class="user-panel d-flex">
+        <div class="image">
+          <img src="../../../assets/img/default.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block warna-ketiga">Admin FTI</a>
+        </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar elevation-4 bg-warna">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link pb-0 mb-0">
+      <img src="../../../assets/img/logo-fti.png" alt="Logo" class="brand-image img-circle elevation-3 border">
+      <span class="brand-text font-weight-light">
+      <div style="font-size: 12px; color: black; font-weight: bold">Fakultas Teknologi Industri</div>
+      <div style="font-size: 10px; color: black; font-weight: bold">Sistem Informasi Manajeman Yudisium</div>
+    </span>
+    <hr>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="../dashboard/index.html" class="nav-link" style="color: black;">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link aktif" style="color: black;">
+              <i class="nav-icon fas fa-check"></i>
+              <p>
+                Validasi Pendaftaran
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../data_yudisium/index.html" class="nav-link" style="color: black;">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Kelola Data Yudisium
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../periode/index.html" class="nav-link" style="color: black;">
+              <i class="nav-icon fas fa-calendar"></i>
+              <p>
+                Periode & Tanda Terima
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link" style="color: black;">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper pt-5 mt-3">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Validasi Pendaftaran</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="warna-ketiga" href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active">Validasi Pendaftaran</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-5">
+              <div class="card-body">
+              <div class="table-responsive">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">No</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Tanggal</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Nama</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">NIM</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Prodi</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">FC Ijazah SMA</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">FC Akta Kelahiran</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas UKT</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas Lab</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas Pustaka</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Sertifikat TOEFL</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Pas Foto 3x4</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Detail Berkas</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Status</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-01-01</td>
+                    <td>Gery</td>
+                    <td>123456</td>
+                    <td>Sistem Informasi</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#detailBerkas">Lihat</button></td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
+                      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2020-01-01</td>
+                    <td>Fadhilah </td>
+                    <td>123456</td>
+                    <td>Teknik Elektro</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#detailBerkas">Lihat</button></td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
+                      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2020-01-01</td>
+                    <td>Annike</td>
+                    <td>123456</td>
+                    <td>Sistem Informasi</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#detailBerkas">Lihat</button></td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
+                      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>2020-01-01</td>
+                    <td>Syafira Komala</td>
+                    <td>123456</td>
+                    <td>Sistem Informasi</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#detailBerkas">Lihat</button></td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
+                      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>2020-01-01</td>
+                    <td>Merysah</td>
+                    <td>123456</td>
+                    <td>Rekayasa Minyak dan Gas</td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><input type="checkbox" disabled></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalBerkas">Lihat</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#detailBerkas">Lihat</button></td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTerima">Terima</button>
+                      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalTolak">Tolak</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">No</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Tanggal</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Nama</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">NIM</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Prodi</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">FC Ijazah SMA</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">FC Akta Kelahiran</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas UKT</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas Lab</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">SK Bebas Pustaka</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Sertifikat TOEFL</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Pas Foto 3x4</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Detail Berkas</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Status</th>
+                    <th class="small align-items-center m-0" style="background-color: #EEC01D;">Tanda Terima</th>
+                  </tr>
+                  </tfoot>
+                </table>
+                </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+
+    </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Modal Content Goes Here
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Additional buttons can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Berkas -->
+  <div class="modal fade" id="modalBerkas" tabindex="-1" role="dialog" aria-labelledby="modalBerkasLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBerkasLabel">Berkas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <embed src="../../../assets/img/logo-fti.png" type="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Additional buttons can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detail Berkas -->
+  <div class="modal fade" id="detailBerkas" tabindex="-1" role="dialog" aria-labelledby="detailBerkasLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detailBerkasLabel">Detail Berkas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <embed src="../../../assets/img/logo-fti.png" type="">
+          <embed src="../../../assets/img/logo-fti.png" type="">
+          <embed src="../../../assets/img/logo-fti.png" type="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+          <!-- Additional buttons can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Terima -->
+  <div class="modal fade" id="modalTerima">
+    <div class="modal-dialog">
+      <form class="modal-content">
+
+        <!-- Header modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Terima Pengajuan</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Isi modal -->
+        <div class="modal-body">
+          <p>Apakah Anda yakin ingin menerima pengajuan ini?</p>
+        </div>
+
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-success">Terima</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Tolak -->
+  <div class="modal fade" id="modalTolak">
+    <div class="modal-dialog">
+      <form action="" class="modal-content">
+
+        <!-- Header modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tolak Pengajuan</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Isi modal -->
+        <div class="modal-body">
+              <label for="keterangan">Alasan Penolakan</label>
+              <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+        </div>
+
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger">Tolak</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+    <footer class="main-footer fixed-bottom">
+        <strong>Copyright &copy; 2024 <a href="#">SIYUDIS</a>.</strong> All rights reserved.
+    </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+
+<!-- jQuery -->
+<script src="../../../assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../../assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../../assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../../assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../../assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../../assets/plugins/jszip/jszip.min.js"></script>
+<script src="../../../assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../../assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../../assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../../assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../../assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../assets/dist/js/adminlte.min.js"></script>
+<script src="../../../assets/js/script.js"></script>
+<!-- Page specific script -->
+<script>
+    
+$(document).ready(function() {
+  var table = $('#example1').DataTable({
+    "responsive": false,
+    "lengthChange": false,
+    "buttons": [{
+                            extend: 'copy',
+                            text: '<i class="fas fa-copy"></i> Copy',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'csv',
+                            text: '<i class="fas fa-file-csv"></i> CSV',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'excel',
+                            text: '<i class="fas fa-file-excel"></i> Excel',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'pdf',
+                            text: '<i class="fas fa-file-pdf"></i> PDF',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'print',
+                            text: '<i class="fas fa-print"></i> Print',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            },
+                        },
+                        {
+                            extend: 'colvis',
+                            text: '<i class="fas fa-eye"></i> Colvis',
+                            className: 'btn btn-dark mb-3',
+                            exportOptions: {
+                                columns: [':not(:last-child)']
+                            }
+                        }
+                    ],
+    "order": [[4, 'asc']],
+    "columnDefs": [
+      { "targets": [4], "orderable": false }
+    ]
+  });
+
+  $('#filterStatus').on('change', function() {
+    var val = $(this).val();
+    table.column(5).search(val ? '^' + val + '$' : '', true, false).draw();
+  });
+  table.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+});
+</script>
+</body>
+</html>
+
