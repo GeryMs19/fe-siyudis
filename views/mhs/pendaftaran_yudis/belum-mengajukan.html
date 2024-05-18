@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIYUDIS | Pengajuan Berkas</title>
+  <title>SIYUDIS | Pendaftaran Yudisium</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,7 +16,6 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../../assets/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="../../../assets/css/style.css">
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -72,7 +71,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../pendaftaran_yudis/index.html" class="nav-link" style="color: black;">
+            <a href="#" class="nav-link aktif" style="color: black;">
               <i class="nav-icon fas fa-chart-bar"></i>
               <p>
                 Pendaftaran Yudisium
@@ -88,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link aktif" style="color: black;">
+            <a href="../bebas_ukt/index.html" class="nav-link" style="color: black;">
               <i class="nav-icon fas fa-file-upload"></i>
               <p>
                 Bebas UKT
@@ -125,12 +124,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Pengajuan Berkas</h1>
+            <h1 class="m-0">Cek Status Pendaftaran</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a class="warna-ketiga" href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Pengajuan Berkas</li>
+              <li class="breadcrumb-item active">Cek Status Pendaftaran</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -142,41 +141,59 @@
     <section class="content">
       <div class="container-fluid">
         <div class="d-flex justify-content-center align-items-center">
-          <div class="col-12 mb-5 card">
-              <br/>
-              <h1 class="title text-center font-weight-bold">Bebas UKT</h1>
-              <br>
-              <div>
-                <ul>
-                  <li>Sebelum mengajukan surat bebas UKt, Pastikan anda sudah memenuhi persyaratan dengan mengupload berkas-berkas di bawah ini.</li>
-                  <li>Bagi Mahasiswa yang mendapatkan beasiswa,Silahkan mengajukan surat keterangan mahasiswa pada bagian Akademik ITERA</li>
-                  <li>Silahkan upload Surat Keterangan Mahasiswa dalam pendaftaran yudisium sebagai pengganti sementara SK Bebas UKT</li>
-                  <li>File yang diupload bertipe PDF dengan maksimal size 2MB</li>
-                  <li>Apabila sudah terpenuhi semua persyaratan, silahkan mengajukan SK Bebas UKT di bawah ini</li>
-                </ul>
-              </div>
-                <div class="form-inner">
-                  <form action="#" class="login mb-5">
-                    <div class="row">
-                      <div class="form-group col-4">
-                        <label class="form-label" for="ba_sidang">Berita Acara Sidang</label>
-                        <input type="file" class="form-control" name="ba_sidang" id="ba_sidang" required placeholder="ba_sidang">
-                      </div>
-                      <div class="form-group col-4">
-                        <label class="form-label" for="khs">Kartu Hasil Studi (TerTTD Dosen Wali)</label>
-                        <input type="file" class="form-control" name="khs" id="khs" required placeholder="khs">
-                      </div>
-                      <div class="form-group col-4">
-                        <label class="form-label" for="ss_lunas">Screenshot Lunas UKT AVITA</label>
-                        <input type="file" class="form-control" name="ss_lunas" id="ss_lunas" required placeholder="ss_lunas">
-                      </div>
+          <div class="col-12 mb-5">
+            <div class="card">
+              <div class="card-body">
+                <form class="" action="" method="post" enctype="multipart/form-data">
+                  <div class="d-flex justify-content-center align-items-center py-2 mb-3" style="background-color: #EEC01D; border-radius: 20px;">
+                    <b>Form Pendaftaran Yudisium</b>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-4">
+                      <label class="form-label" for="sb_ukt">Surat Bebas UKT</label>
+                      <p><span class="badge badge-warning">Belum Mengajukan</span></p>
                     </div>
-                    <div class="field btn">
-                      <div class="btn-layer"></div>
-                      <input type="submit" value="Ajukan" />
+                    <div class="form-group col-4">
+                      <label class="form-label" for="sb_lab">Surat Bebas Lab</label>
+                      <p><span class="badge badge-warning">Belum Mengajukan</span></p>
                     </div>
-                  </form>
-                </div>
+                    <div class="form-group col-4">
+                      <label class="form-label" for="sb_pus">Surat Bebas Pustaka</label>
+                      <p><span class="badge badge-warning">Belum Mengajukan</span></p>
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="transkrip">Transkrip</label>
+                      <input type="file" class="form-control" name="transkrip" id="transkrip" required placeholder="transkrip">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="toefl">Sertifikat TOEFL</label>
+                      <input type="file" class="form-control" name="toefl" id="toefl" required placeholder="toefl">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="ijazah">Ijazah SMA</label>
+                      <input type="file" class="form-control" name="ijazah" id="ijazah" required placeholder="ijazah">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="foto">Foto 3x4</label>
+                      <input type="file" class="form-control" name="foto" id="foto" required placeholder="foto">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="akta">Akta kelahiran</label>
+                      <input type="file" class="form-control" name="akta" id="akta" required placeholder="akta">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="surat_lunas">Surat Keterangan Lunas (Opsional)</label>
+                      <input type="file" class="form-control" name="surat_lunas" id="surat_lunas" enabled placeholder="surat_lunas">
+                    </div>
+                    <div class="form-group col-6">
+                      <label class="form-label" for="surat_lunas">BA Sidang</label>
+                      <input type="file" class="form-control" name="ba_sidang" id="ba_sidang" enabled placeholder="ba_sidang">
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" class="btn text-white px-5" style="background-color: #EEC01D;">DAFTAR</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
